@@ -1,0 +1,58 @@
+/* 
+  src/App.css
+  
+  Since we are using Tailwind CSS for styling, 
+  this file typically only needs the base Tailwind directives.
+  These directives inject Tailwind's utility classes and base styles.
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Optional: Add custom scrollbar styles for a more modern look, 
+  which can enhance the overall UI aesthetic, especially in web applications.
+*/
+
+/* 
+  Note on typography: 
+  Tailwind sets the default font family, typically a system stack. 
+  For Arabic text ('تطبيق فيسبوك'), a font stack including an Arabic-friendly 
+  font (like Noto Sans Arabic, or a modern system font like those on iOS/Android/Windows) 
+  is implicitly used or can be explicitly defined in tailwind.config.js. 
+  
+  For this CSS file, we keep it minimal as per Tailwind best practices.
+*/
+
+/* Custom scrollbar styles (optional, for aesthetics) */
+html {
+  /* Hides scrollbar on specific browsers if needed, though Tailwind uses OS defaults */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #1877f2 #f0f2f5; /* Facebook Blue and light background */
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f2f5; /* Light grey track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c9ccd0; /* Slightly darker thumb */
+  border-radius: 4px;
+  border: 2px solid #f0f2f5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8a9ad;
+}
+
+/* Ensure the root element spans the full viewport */
+#root {
+  min-height: 100vh;
+}
